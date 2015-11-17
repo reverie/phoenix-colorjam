@@ -6,3 +6,7 @@
 
 <label for="blue">Blue</label>
 <input type="range" min="0" max="255" value="255" id="blue">
+
+<div id="source-link">
+  <a href="https://github.com/reverie/phoenix-colorjam" target="_blank">https://github.com/reverie/phoenix-colorjam</a>
+</div>

@@ -1,0 +1,9 @@
+#source-link {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: .5em;
+}
+#source-link a {
+  color: rgba(128, 128, 128, .3);
+}
