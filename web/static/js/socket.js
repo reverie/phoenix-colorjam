@@ -77,7 +77,13 @@ channel.on("new_msg", payload => {
 })
 
 channel.join()
-  .receive("ok", resp => { console.log("Joined successfully", resp) })
+  .receive("ok", resp => { 
+      console.log("Joined successfully", resp) 
+      $('#red').val(resp.red)
+      $('#green').val(resp.green)
+      $('#blue').val(resp.blue)
+      colorInputs.trigger('input') // Set initial color
+  })
   .receive("error", resp => { console.log("Unable to join", resp) })
 
 export default socket
