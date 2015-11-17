@@ -1,8 +1,8 @@
 <label for="red">Red</label>
-<input type="range" min="0" max="255" value="0" id="red">
+<input type="range" min="0" max="255" value="255" id="red">
 
 <label for="green">Green</label>
-<input type="range" min="0" max="255" value="0" id="green">
+<input type="range" min="0" max="255" value="255" id="green">
 
 <label for="blue">Blue</label>
-<input type="range" min="0" max="255" value="0" id="blue">
+<input type="range" min="0" max="255" value="255" id="blue">
