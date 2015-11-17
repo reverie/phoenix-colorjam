@@ -1,2 +1,8 @@
-<div id="messages"></div>
-<input id="chat-input" type="text"></input>
+<label for="red">Red</label>
+<input type="range" min="0" max="255" value="0" id="red">
+
+<label for="green">Green</label>
+<input type="range" min="0" max="255" value="0" id="green">
+
+<label for="blue">Blue</label>
+<input type="range" min="0" max="255" value="0" id="blue">

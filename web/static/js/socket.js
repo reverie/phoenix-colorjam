@@ -55,18 +55,25 @@ socket.connect()
 
 // Now that you are connected, you can join channels with a topic:
 let channel = socket.channel("rooms:lobby", {})
-let chatInput = $("#chat-input")
-let messagesContainer = $("#messages")
+let colorInputs = $("#red, #green, #blue");
 
-chatInput.on("keypress", event => {
-    if(event.keyCode === 13){
-        channel.push("new_msg", {body: chatInput.val()})
-        chatInput.val("")
-    }
+colorInputs.on("input", event => {
+    var red = $('#red').val()
+    var green = $('#green').val()
+    var blue = $('#blue').val()
+    console.log(red, green, blue)
+    channel.push("new_msg", {
+        red: red,
+        green: green,
+        blue: blue
+    })
 })
 
 channel.on("new_msg", payload => {
-    messagesContainer.append(`<br/>[${Date()}] ${payload.body}`)
+    $('#red').val(payload.red)
+    $('#green').val(payload.green)
+    $('#blue').val(payload.blue)
+    $('body').css('background-color', `rgb(${payload.red}, ${payload.green}, ${payload.blue})`)
 })
 
 channel.join()
